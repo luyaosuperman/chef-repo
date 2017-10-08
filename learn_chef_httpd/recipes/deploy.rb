@@ -10,5 +10,8 @@ file '/var/www/html/deploy.html' do
 shortname       - #{app['shortname']}
 app_source.type - #{app['app_source']['type']}
 app_source.url  - #{app['app_source']['url']}
+stack-overall   - #{node['stack-overall']}
+stack-layer     - #{node['stack-layer']}
+
 "
 end
