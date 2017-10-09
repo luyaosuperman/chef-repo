@@ -1,15 +1,6 @@
 ---
 driver:
-  #name: vagrant
-  name: ec2
-  aws_ssh_key_id: aws-yaoam
-  region: ap-southeast-2
-  availability_zone: b
-  subnet_id: subnet-27d17243
-  instance_type: t2.micro
-  image_id: ami-30041c53
-  security_group_ids: ["sg-4f9db72b"]
-  retryable_tries: 120
+  name: vagrant
 
 provisioner:
   name: chef_zero
@@ -22,16 +13,13 @@ verifier:
   name: inspec
 
 platforms:
+  - name: ubuntu-16.04
   - name: centos-7
-
-transport:
-  username : ec2-user
-  ssh_key: /root/ssh.pem
 
 suites:
   - name: default
     run_list:
-      - recipe[learn_chef_httpd::default]
+      - recipe[lamp::default]
     verifier:
       inspec_tests:
         - test/smoke/default
