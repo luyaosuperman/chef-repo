@@ -1,0 +1,5 @@
+---
+server_id: i-078494c0e79efceb0
+hostname: ec2-54-79-56-11.ap-southeast-2.compute.amazonaws.com
+last_action: create
+last_error: Kitchen::ActionFailed

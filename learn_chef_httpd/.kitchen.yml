@@ -36,3 +36,7 @@ suites:
       inspec_tests:
         - test/smoke/default
     attributes:
+  - name: config
+    run_list:
+      - recipe[learn_chef_httpd::config]
+

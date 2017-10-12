@@ -4,4 +4,4 @@ DEPENDENCIES
     metadata: true
 
 GRAPH
-  learn_chef_httpd (0.3.2)
+  learn_chef_httpd (0.4.2)

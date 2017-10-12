@@ -1,5 +1,5 @@
 ---
-last_error: 
-server_id: i-016a8918a203de8cb
-hostname: ec2-52-64-112-142.ap-southeast-2.compute.amazonaws.com
+server_id: i-0cafb8c00c4f5da4e
+hostname: ec2-13-210-138-38.ap-southeast-2.compute.amazonaws.com
 last_action: converge
+last_error: 

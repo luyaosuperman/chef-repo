@@ -23,3 +23,4 @@ source_url 'https://github.com/learn-chef/lamp' if respond_to?(:source_url)
 supports 'centos-7'
 
 depends 'httpd', '~> 0.5'
+depends 'mysql', '~> 8.5.1'

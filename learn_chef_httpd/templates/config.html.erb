@@ -1,0 +1,6 @@
+$aws_opsworks_instance{
+<% @aws_opsworks_instance.each do |instance| %>
+<%= "hostname - #{instance["hostname"]} "%>
+<%= "instance_id - #{instance["instance_id"]} "%>
+<% end %>
+}
