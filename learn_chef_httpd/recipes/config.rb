@@ -17,7 +17,7 @@ end
 
 template 'config_instance' do
   path '/var/www/html/config/config_instance.html'
-  source 'templates/config.html.erb'
+  source 'config.html.erb'
   variables(
     :aws_opsworks_instance => search("aws_opsworks_instance")
   )
