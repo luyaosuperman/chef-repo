@@ -16,7 +16,7 @@ stack-layer     - #{node['stack-layer']}
 end
 
 template 'config_instance' do
-  path '/var/www/html/config/config_instance.html'
+  path '/var/www/html/config_instance.html'
   source 'config.html.erb'
   variables(
     :aws_opsworks_instance => search("aws_opsworks_instance")
