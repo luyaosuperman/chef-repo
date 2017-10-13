@@ -4,7 +4,7 @@
 #
 # Copyright:: 2017, The Authors, All Rights Reserved.
 #app = search(:aws_opsworks_app).first
-app = search(:aws_opsworks_app,"deploy:true")
+app = search(:aws_opsworks_app,"deploy:true").first
 shortname = app['shortname']
 
 file "/var/www/html/deploy-#{shortname}.html" do
