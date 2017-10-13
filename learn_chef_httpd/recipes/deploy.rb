@@ -14,7 +14,7 @@ stack-overall   - #{node['stack-overall']}
 stack-layer     - #{node['stack-layer']}
 
 Enviroment variables:
-username        - #{app['enviroment']['username']}
+username        - #{app['environment']['username']}
 
 "
 end
