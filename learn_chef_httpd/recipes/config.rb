@@ -15,10 +15,14 @@ stack-layer     - #{node['stack-layer']}
 "
 end
 
+#current_instance = search("aws_opsworks_instance","self:true").first
+#current_layer = current_instance['layer_ids'][0]
+
+
 template 'config_instance' do
   path '/var/www/html/config_instance.html'
   source 'config.html.erb'
   variables(
-    :aws_opsworks_instance => search("aws_opsworks_instance")
+    :aws_opsworks_instance => search("aws_opsworks_instance","status:online")
   )
 end
