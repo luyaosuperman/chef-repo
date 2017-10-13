@@ -13,5 +13,8 @@ app_source.url  - #{app['app_source']['url']}
 stack-overall   - #{node['stack-overall']}
 stack-layer     - #{node['stack-layer']}
 
+Enviroment variables:
+username        - #{node['enviroment']['username']}
+
 "
 end
