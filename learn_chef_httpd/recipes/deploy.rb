@@ -7,7 +7,8 @@
 app = search(:aws_opsworks_app,"deploy:true").first
 shortname = app['shortname']
 
-Chef::Log.info("********** '#{app['enviroment']['username']}'")
+Chef::Log.info("********** '#{app['environment']['username']}'")
+Chef::Log.info("********** '#{app['environment']}'")
 
 #env_variables_1 = node[:deploy]
 #env_variables_2 = env_variables_1[shortname]
