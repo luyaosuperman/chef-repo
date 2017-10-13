@@ -7,9 +7,11 @@
 app = search(:aws_opsworks_app,"deploy:true").first
 shortname = app['shortname']
 
-env_variables_1 = node[:deploy]
-env_variables_2 = env_variables_1[shortname]
-env_variables   = env_variables_2[:environment_variables]
+Chef::Log.info("********** '#{app['enviroment']}'")
+
+#env_variables_1 = node[:deploy]
+#env_variables_2 = env_variables_1[shortname]
+#env_variables   = env_variables_2[:environment_variables]
 
 file "/var/www/html/deploy-#{shortname}.html" do
   content "deployed
@@ -21,7 +23,7 @@ stack-layer     - #{node['stack-layer']}
 
 Enviroment variables:
 
-username        - #{env_variables['username']}
+username        - 
 
 "
 end
