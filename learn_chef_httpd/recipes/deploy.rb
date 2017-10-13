@@ -24,7 +24,7 @@ stack-layer     - #{node['stack-layer']}
 
 Enviroment variables:
 
-username        - 
+username        - #{app['environment']['username']}
 
 "
 end
