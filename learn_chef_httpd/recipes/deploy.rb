@@ -5,7 +5,6 @@
 # Copyright:: 2017, The Authors, All Rights Reserved.
 app = search(:aws_opsworks_app).first
 shortname = app['shortname']
-env_variables = node['deploy'][shortname]['environment_variables']
 
 file "/var/www/html/deploy-#{shortname}.html" do
   content "deployed
@@ -16,7 +15,6 @@ stack-overall   - #{node['stack-overall']}
 stack-layer     - #{node['stack-layer']}
 
 Enviroment variables:
-username        - #{env_variables['username']}
 
 "
 end
