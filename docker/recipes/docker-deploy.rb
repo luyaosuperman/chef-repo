@@ -65,4 +65,3 @@ node[:deploy].each do |application, deploy|
    end
  end
 
-end
