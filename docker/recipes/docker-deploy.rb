@@ -39,7 +39,7 @@ node[:deploy].each do |application, deploy|
     EOH
   end
 
-  directory "#{deploy[:deploy_to]}/current"
+  directory "#{deploy[:deploy_to]}/current" do
     action :create
   end
 
@@ -65,3 +65,4 @@ node[:deploy].each do |application, deploy|
    end
  end
 
+end
