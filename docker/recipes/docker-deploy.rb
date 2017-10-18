@@ -39,10 +39,6 @@ node[:deploy].each do |application, deploy|
     EOH
   end
 
-  directory "#{deploy[:deploy_to]}/current" do
-    action :create
-  end
-
   bash "docker-build" do
     user "root"
     cwd "#{deploy[:deploy_to]}/current"
